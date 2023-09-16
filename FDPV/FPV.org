@@ -1,0 +1,125 @@
+#+TITLE: Fonctions a plusieurs variables
+#+AUTHOR: raph
+#+STARTUP: showeverything inlineimages latexpreview
+#+SETUPFILE: ~/Documents/Cours/latex-setup-file.setup
+
+* Sommaire :noexport:toc:
+- [[#surface-et-lignes-de-niveau][Surface et lignes de niveau]]
+- [[#limites-et-continuite][Limites et continuite]]
+  - [[#limite][Limite]]
+  - [[#continuite][Continuite]]
+- [[#derivee-partielle][Derivee partielle]]
+  - [[#notation][Notation]]
+  - [[#utilisation][Utilisation]]
+- [[#plans-tangents-et-approximations-linéaires][Plans tangents et approximations linéaires]]
+  - [[#plans][Plans]]
+  - [[#approximation-lineaire][Approximation lineaire]]
+- [[#dérivées-directionnelles-et-gradients][Dérivées directionnelles et gradients]]
+  - [[#derivee-directionnelle][Derivee directionnelle]]
+  - [[#taux-daccroissement][Taux d'accroissement]]
+- [[#la-dérivée-composée-ou--chain-rule-][La dérivée composée ou « chain rule »]]
+- [[#maxima-minima-et-points-cols][Maxima, minima et points-cols]]
+
+* Surface et lignes de niveau
+
+On peut definir une surface 2D dans un espace 3D de deux manieres:
+
+- \( z = f(x,y) \)
+- \( 0 = F(x,y,z) \)
+
+Une ligne de niveau est donnee par: \( cst = f(x,y) \)
+
+* Limites et continuite
+
+** Limite
+
+Le voisinage/limite d'un point \( a \) est defini par l'ensemble suivant qui utilise un disque:
+\[ \{x\in \mathbb{R} ^{2}, \lVert x-a \rVert < \delta\} \]
+Ce qui implique qu'avec deux variables, ont peut approcher un point depuis *plusieurs directions ou chemins*
+
+Probleme, le disque peut etre en dehors de l'espace de definition, il y a alors 2 points differents:
+- un point entierement dans le disque: *point interieur*
+- un point partiellement en dehors: *point de bord*
+
+** Continuite
+
+\( f(x) \) continue en \( x_{0} \) :
+
+- \( f(x_{0}) \) existe
+- \( \underset{x \to x_{0}}{lim} f(x) \) existe
+- \( \underset{x \to x_{0}}{lim} f(x) = f(x_{0}) \)
+
+* Derivee partielle
+
+** Notation
+
+\[ \frac{\partial{f}}{\partial{x}}= f_{x} \qquad\text{ou bien}\qquad \frac{\partial{f}}{\partial{y}} = f_{y} \]
+
+** Utilisation
+
+On peut utiliser ces derivee partielle afin d'etudier une surface dans une direction donnee.
+
+*** Matrice Hessienne
+
+La matrice Hessienne des derivees secondes est la suivante:
+
+\[H = \begin{pmatrix}
+f_{xx} & f_{xy}\\
+f_{yx} & f_{yy}
+\end{pmatrix}
+\qquad{\text{Heureusement }} f_{xy} = f_{yx}
+\]
+
+
+*** Point de col
+
+Il y *possiblement* mais pas necessairement un point de col quand:
+\[ f_{x} = f_{y} = 0 \]
+
+* Plans tangents et approximations linéaires
+
+** Plans
+
+On peut approximer une surface, d'equation \( z = f(x,y) \) localement par un *plan* d'equation:
+\[ z - z_{0} = \left( \frac{\partial{f}}{\partial{x}} \right)_{0} (x - x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
+Et on defini le *vecteur normal* a ce plan:
+\[ N= \begin{pmatrix} (f_{x})_{0}\\(f_{y})_{0}\\-1\end{pmatrix} \\ \qquad\text{Dirige vers l'exterieur pour une surface fermee}\qquad  \]
+
+/Note/: On peut poser: \( f = F + z \)
+
+** Approximation lineaire
+
+En prenant \( df = f(x,y) - f(x_{0}, y_{0}) \) de \( f \) au point \( (x_{0},y_{0}) \), on a:
+
+\[ f(x,y) \sim f(x_{0},y_{0}) + \left( \frac{\partial{f}}{\partial{x}} \right)_{0}(x-x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
+* Dérivées directionnelles et gradients
+
+*Rappel*: /En deux dimensions, ont peut construire une derivee dans une direction precise telle que \( Ox \) et \( Oy \) / (cf. [[*Utilisation][Utilisation]])
+
+** Derivee directionnelle
+
+Ainsi, une *derivee directionnelle* est donnee par:
+\[ D_{u}f = \nabla f \cdot u \]
+Le vecteur u est *unitaire* (cad \( \lVert u \rVert = 1 \) )
+
+** Taux d'accroissement
+
+Il est donne par:
+\[ \frac{df}{dt} = \frac{\partial{f}}{\partial{x}}\frac{dx}{dt}+\frac{\partial{f}}{\partial{y}}\frac{dy}{dt} \]
+
+* La dérivée composée ou « chain rule »
+
+TODO: Ecrire la formule
+
+* Maxima, minima et points-cols
+
+[[*Point de col][Ceci]] est aussi vrai pour les extrema
+
+La nature d'un point *stationnaire* (extrema, point de col) est ensuite determine par ses derievees partielles secondes. Cela revient a etudier la position de la surface associee a \( f \) par rapport a son plan tangent au point stationnaire.
+
+En dimension arbitraire, la condition de stationnarite est formulee par:
+\[ \nabla f = 0 \] 
+
+/Ou alors on utilise la matrice Hessienne, voir methode./
+
+*LE RESTE NE SEMBLE PAS ETRE DANS LES TDS, A VOIR ET CORRIGER SI NECESSAIRE*
