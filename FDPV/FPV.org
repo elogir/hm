@@ -5,8 +5,10 @@
 
 * Sommaire :noexport:toc:
 - [[#surface-et-lignes-de-niveau][Surface et lignes de niveau]]
+  - [[#methode][Methode]]
 - [[#limites-et-continuite][Limites et continuite]]
   - [[#limite][Limite]]
+  - [[#methode-1][Methode]]
   - [[#continuite][Continuite]]
 - [[#derivee-partielle][Derivee partielle]]
   - [[#notation][Notation]]
@@ -29,6 +31,14 @@ On peut definir une surface 2D dans un espace 3D de deux manieres:
 
 Une ligne de niveau est donnee par: \( cst = f(x,y) \)
 
+** Methode
+
+1. Poser \( f(x) = cst \) avec \( cst \) generalement donnee
+2. Isoler une des deux variables de \( f \) en fonction du reste (generalement \( y = \text{le reste} \))
+3. Determiner pour plusieurs points de \( x \) la valeur grace a l'equation precedente (*Attention a verifier que le point existe, exemple: \( \sqrt{x} \)*)
+4. Tracer la courbe grace aux points
+5. Si on nous demande de determiner les valeurs de \( x \) pour lesquelles \( f(x) = \text{quelque chose}  \), regarder les intersections entre les courbes (cf. Exo 4 TD1)
+
 * Limites et continuite
 
 ** Limite
@@ -38,8 +48,22 @@ Le voisinage/limite d'un point \( a \) est defini par l'ensemble suivant qui uti
 Ce qui implique qu'avec deux variables, ont peut approcher un point depuis *plusieurs directions ou chemins*
 
 Probleme, le disque peut etre en dehors de l'espace de definition, il y a alors 2 points differents:
-- un point entierement dans le disque: *point interieur*
-- un point partiellement en dehors: *point de bord*
+- Un point entierement dans le disque: *point interieur*
+- Un point partiellement en dehors: *point de bord*
+
+** Methode
+
+*** Determiner une limite qui existe
+
+Afin d'annuler les Forme Indeterminee:
+- \( \sim \) quand on a des sinus sous reserve que ca tende vers 0
+- Utiliser le conjugue, souvent avec les \( \sqrt{\cdot} \)
+- Annuler le denominateur autrement
+
+/Remarques/:
+- \( x^{T}x = \lVert x \rVert^{2} \) et une norme est toujours positive
+- \( A^{T} = A \) si \( A \) est symmetrique
+- La transposee d'un scalaire c'est lui meme, donc \( <x,y> = <x,y>^{T} \) 
 
 ** Continuite
 
