@@ -28,7 +28,7 @@
 
 * Surface et lignes de niveau
 
-On peut définir une surface 2D dans un espace 3D de deux manières:
+On peut definir une surface 2D dans un espace 3D de deux manières:
 
 - \( z = f(x,y) \)
 - \( 0 = F(x,y,z) \)
@@ -37,7 +37,7 @@ Une ligne de niveau est donnée par: \( cst = f(x,y) \)
 
 ** Méthode
 
-1. Poser \( f(x) = cst \) avec \( cst \) généralement donnée
+1. Poser \( f(x, y) = cst \) avec \( cst \) généralement donnée
 2. Isoler une des deux variables de \( f \) en fonction du reste (généralement \( y = \text{le reste} \))
 3. Déterminer pour plusieurs points de \( x \) la valeur grâce a l'équation précédente (*Attention a vérifier que le point existe, exemple: \( \sqrt{x} \)*)
 4. Tracer la courbe grâce aux points
@@ -67,7 +67,7 @@ Problème, le disque peut être en dehors de l'espace de définition, il y a alo
 
 *** Déterminer une limite qui existe
 
-Afin d'annuler les Forme Indéterminée:
+Afin de neutraliser les Formes Indéterminées:
 - \( \sim \) quand on a des sinus sous réserve que ça tende vers 0
 - Utiliser le conjugue, souvent avec les \( \sqrt{\cdot} \)
 - Annuler le dénominateur autrement
