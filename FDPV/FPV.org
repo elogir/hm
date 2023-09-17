@@ -8,19 +8,23 @@
   - [[#methode][Methode]]
 - [[#limites-et-continuite][Limites et continuite]]
   - [[#limite][Limite]]
-  - [[#methode-1][Methode]]
   - [[#continuite][Continuite]]
+  - [[#methode-1][Methode]]
 - [[#derivee-partielle][Derivee partielle]]
   - [[#notation][Notation]]
   - [[#utilisation][Utilisation]]
 - [[#plans-tangents-et-approximations-linéaires][Plans tangents et approximations linéaires]]
   - [[#plans][Plans]]
   - [[#approximation-lineaire][Approximation lineaire]]
+  - [[#methode-2][Methode]]
 - [[#dérivées-directionnelles-et-gradients][Dérivées directionnelles et gradients]]
   - [[#derivee-directionnelle][Derivee directionnelle]]
   - [[#taux-daccroissement][Taux d'accroissement]]
+  - [[#gradient][Gradient]]
+  - [[#methode-3][Methode]]
 - [[#la-dérivée-composée-ou--chain-rule-][La dérivée composée ou « chain rule »]]
 - [[#maxima-minima-et-points-cols][Maxima, minima et points-cols]]
+  - [[#methode-4][Methode]]
 
 * Surface et lignes de niveau
 
@@ -51,6 +55,14 @@ Probleme, le disque peut etre en dehors de l'espace de definition, il y a alors 
 - Un point entierement dans le disque: *point interieur*
 - Un point partiellement en dehors: *point de bord*
 
+** Continuite
+
+\( f(x) \) continue en \( x_{0} \) :
+
+- \( f(x_{0}) \) existe
+- \( \underset{x \to x_{0}}{lim} f(x) \) existe
+- \( \underset{x \to x_{0}}{lim} f(x) = f(x_{0}) \)
+
 ** Methode
 
 *** Determiner une limite qui existe
@@ -65,14 +77,7 @@ Afin d'annuler les Forme Indeterminee:
 - \( A^{T} = A \) si \( A \) est symmetrique
 - La transposee d'un scalaire c'est lui meme, donc \( <x,y> = <x,y>^{T} \) 
 
-** Continuite
-
-\( f(x) \) continue en \( x_{0} \) :
-
-- \( f(x_{0}) \) existe
-- \( \underset{x \to x_{0}}{lim} f(x) \) existe
-- \( \underset{x \to x_{0}}{lim} f(x) = f(x_{0}) \)
-
+  
 * Derivee partielle
 
 ** Notation
@@ -94,12 +99,6 @@ f_{yx} & f_{yy}
 \qquad{\text{Heureusement }} f_{xy} = f_{yx}
 \]
 
-
-*** Point de col
-
-Il y *possiblement* mais pas necessairement un point de col quand:
-\[ f_{x} = f_{y} = 0 \]
-
 * Plans tangents et approximations linéaires
 
 ** Plans
@@ -116,34 +115,93 @@ Et on defini le *vecteur normal* a ce plan:
 En prenant \( df = f(x,y) - f(x_{0}, y_{0}) \) de \( f \) au point \( (x_{0},y_{0}) \), on a:
 
 \[ f(x,y) \sim f(x_{0},y_{0}) + \left( \frac{\partial{f}}{\partial{x}} \right)_{0}(x-x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
+** Methode
+
+*Attention: toujours verifier qu'on nous donne pas directement un plan*
+
+*** Determiner le plan tangent \( z = f(x,y) \)
+
+Soit un point \( P=(a, b, c) \), on utilise la formule:
+\[ \frac{\partial{f}}{\partial{x}}(a,b) \cdot (x - a) + \frac{\partial{f}}{\partial{y}}(a,b) \cdot (y-b) + f(a,b) - z = 0 \]
+Ainsi, on calcule les derivees partielles et remplace les expressions et on trouve une equation de plan de la forme:
+\[ ax + by + cz + cst = 0 \]
+
+*** Determiner le plan tangent \( F(x,y,z) = 0 \)
+
+
+Soit un point \( P=(a, b, c) \), on utilise la formule:
+\[ \frac{\partial{f}}{\partial{x}}(a,b,c) \cdot (x - a) + \frac{\partial{f}}{\partial{y}}(a,b,c) \cdot (y-b) + \frac{\partial{f}}{\partial{z}}(a,b,c) \cdot (z-c) = 0 \]
+Ainsi, on calcule les derivees partielles et remplace les expressions et on trouve une equation de plan de la forme:
+\[ ax + by + cz + cst = 0 \]
+
+
+*** Determiner le vecteur normal
+
+Depuis notre equation de plan tangent, notre vecteur normal est le suivant:
+
+\[ N = \begin{pmatrix} a \\ b \\ c \end{pmatrix} \]
+
+Avec \( c = -1 \), des transformations sont peut etre necessaires.
+
 * Dérivées directionnelles et gradients
 
-*Rappel*: /En deux dimensions, ont peut construire une derivee dans une direction precise telle que \( Ox \) et \( Oy \) / (cf. [[*Utilisation][Utilisation]])
+*Rappel*: /En deux dimensions, ont peut construire une derivee dans une direction precise telle que \( Ox \) et \( Oy \) (cf. [[*Utilisation][Utilisation]])/
 
 ** Derivee directionnelle
 
 Ainsi, une *derivee directionnelle* est donnee par:
-\[ D_{u}f = \nabla f \cdot u \]
-Le vecteur u est *unitaire* (cad \( \lVert u \rVert = 1 \) )
+\[ D_{u}f = \nabla f \cdot \vec{u} \]
+Le vecteur \( u \)  doit etre *unitaire* (cad \( \lVert \vec{u} \rVert = \sqrt{x^{2} + y^{2}} = 1 \))
 
 ** Taux d'accroissement
 
 Il est donne par:
 \[ \frac{df}{dt} = \frac{\partial{f}}{\partial{x}}\frac{dx}{dt}+\frac{\partial{f}}{\partial{y}}\frac{dy}{dt} \]
 
+** Gradient
+
+\[ \nabla f(x,y) = \begin{pmatrix} \frac{\partial{f}}{\partial{x}} \\[6pt] \frac{\partial{f}}{\partial{y}} \end{pmatrix} \] 
+
+Le gradient indique la plus forte pente.
+
+** Methode
+
+*** Determiner \( D_{u}f(x,y) \) selon la direction d'une droite au lieu d'un vecteur unitaire
+
+- Grace a l'equation de droite donnee, on sait qu'une droite passe par \( (0,0) \), trouvons donc un autre point \( (x,f(x)) \) qui nous donne notre vecteur directeur \( \vec{v} \).
+- Verifier que le vecteur est unitaire, si il ne l'est pas comme la plupart du temps, appliquer \( \vec{u} = \frac{\vec{v}}{\lVert \vec{v} \rVert}  \) 
+- Appliquer la formule \[ D_{u}f = \nabla f \cdot \vec{u} \]
+
+*** Determiner la derivee directionnelle dans la direction de la pente positive maximale
+
+La pente positive maximale est donnee par le gradient, cependant le gradient n'est pas unitaire, on l'unitarise et on trouve au final que la derivee directionnelle est \( D_{u}f = \lVert \nabla f \rVert \) 
+
 * La dérivée composée ou « chain rule »
 
 TODO: Ecrire la formule
 
-* Maxima, minima et points-cols
+Sinon juste remplacer la composee dans la fonction de base.
 
-[[*Point de col][Ceci]] est aussi vrai pour les extrema
+* Maxima, minima et points-cols
 
 La nature d'un point *stationnaire* (extrema, point de col) est ensuite determine par ses derievees partielles secondes. Cela revient a etudier la position de la surface associee a \( f \) par rapport a son plan tangent au point stationnaire.
 
-En dimension arbitraire, la condition de stationnarite est formulee par:
-\[ \nabla f = 0 \] 
+Il y *possiblement* mais pas necessairement un point stationnaire quand:
+\[ \nabla f = \vec{0} \qquad\text{soit}\qquad f_{x} = f_{y} = 0\] 
 
 /Ou alors on utilise la matrice Hessienne, voir methode./
 
-*LE RESTE NE SEMBLE PAS ETRE DANS LES TDS, A VOIR ET CORRIGER SI NECESSAIRE*
+** Methode
+
+*** Determiner la nature d'un point critique
+
+Tout d'abord, calculer la matrice Hessienne pour le point desire.
+
+Ensuite suivre la forme suivante, soit \( H \) la matrice Hessienne:
+
+
+\[\begin{cases}
+\det(H) = 0 \implies \text{rien}  \\
+\det(H) < 0 \implies \text{point de col} \\
+\det(H) > 0 \implies tr(H) > 0 \rightarrow \text{min} \qquad\text{ou}\qquad tr(H) < 0 \rightarrow \text{max}  
+\end{cases}\]
