@@ -5,57 +5,57 @@
 
 * Sommaire :noexport:toc:
 - [[#surface-et-lignes-de-niveau][Surface et lignes de niveau]]
-  - [[#methode][Methode]]
-- [[#limites-et-continuite][Limites et continuite]]
+  - [[#méthode][Méthode]]
+- [[#limites-et-continuité][Limites et continuité]]
   - [[#limite][Limite]]
-  - [[#continuite][Continuite]]
-  - [[#methode-1][Methode]]
-- [[#derivee-partielle][Derivee partielle]]
+  - [[#continuité][Continuité]]
+  - [[#méthode-1][Méthode]]
+- [[#dérivée-partielle][Dérivée partielle]]
   - [[#notation][Notation]]
   - [[#utilisation][Utilisation]]
 - [[#plans-tangents-et-approximations-linéaires][Plans tangents et approximations linéaires]]
   - [[#plans][Plans]]
-  - [[#approximation-lineaire][Approximation lineaire]]
-  - [[#methode-2][Methode]]
+  - [[#approximation-linéaire][Approximation linéaire]]
+  - [[#méthode-2][Méthode]]
 - [[#dérivées-directionnelles-et-gradients][Dérivées directionnelles et gradients]]
-  - [[#derivee-directionnelle][Derivee directionnelle]]
+  - [[#dérivée-directionnelle][Dérivée directionnelle]]
   - [[#taux-daccroissement][Taux d'accroissement]]
   - [[#gradient][Gradient]]
-  - [[#methode-3][Methode]]
+  - [[#méthode-3][Méthode]]
 - [[#la-dérivée-composée-ou--chain-rule-][La dérivée composée ou « chain rule »]]
 - [[#maxima-minima-et-points-cols][Maxima, minima et points-cols]]
-  - [[#methode-4][Methode]]
+  - [[#méthode-4][Méthode]]
 
 * Surface et lignes de niveau
 
-On peut definir une surface 2D dans un espace 3D de deux manieres:
+On peut définir une surface 2D dans un espace 3D de deux manières:
 
 - \( z = f(x,y) \)
 - \( 0 = F(x,y,z) \)
 
-Une ligne de niveau est donnee par: \( cst = f(x,y) \)
+Une ligne de niveau est donnée par: \( cst = f(x,y) \)
 
-** Methode
+** Méthode
 
-1. Poser \( f(x) = cst \) avec \( cst \) generalement donnee
-2. Isoler une des deux variables de \( f \) en fonction du reste (generalement \( y = \text{le reste} \))
-3. Determiner pour plusieurs points de \( x \) la valeur grace a l'equation precedente (*Attention a verifier que le point existe, exemple: \( \sqrt{x} \)*)
-4. Tracer la courbe grace aux points
-5. Si on nous demande de determiner les valeurs de \( x \) pour lesquelles \( f(x) = \text{quelque chose}  \), regarder les intersections entre les courbes (cf. Exo 4 TD1)
+1. Poser \( f(x) = cst \) avec \( cst \) généralement donnée
+2. Isoler une des deux variables de \( f \) en fonction du reste (généralement \( y = \text{le reste} \))
+3. Déterminer pour plusieurs points de \( x \) la valeur grâce a l'équation précédente (*Attention a vérifier que le point existe, exemple: \( \sqrt{x} \)*)
+4. Tracer la courbe grâce aux points
+5. Si on nous demande de déterminer les valeurs de \( x \) pour lesquelles \( f(x) = \text{quelque chose}  \), regarder les intersections entre les courbes (cf. Ex 4 DT1)
 
-* Limites et continuite
+* Limites et continuité
 
 ** Limite
 
-Le voisinage/limite d'un point \( a \) est defini par l'ensemble suivant qui utilise un disque:
+Le voisinage/limite d'un point \( a \) est défini par l'ensemble suivant qui utilise un disque:
 \[ \{x\in \mathbb{R} ^{2}, \lVert x-a \rVert < \delta\} \]
 Ce qui implique qu'avec deux variables, ont peut approcher un point depuis *plusieurs directions ou chemins*
 
-Probleme, le disque peut etre en dehors de l'espace de definition, il y a alors 2 points differents:
-- Un point entierement dans le disque: *point interieur*
+Problème, le disque peut être en dehors de l'espace de définition, il y a alors 2 points différents:
+- Un point entièrement dans le disque: *point intérieur*
 - Un point partiellement en dehors: *point de bord*
 
-** Continuite
+** Continuité
 
 \( f(x) \) continue en \( x_{0} \) :
 
@@ -63,22 +63,22 @@ Probleme, le disque peut etre en dehors de l'espace de definition, il y a alors 
 - \( \underset{x \to x_{0}}{lim} f(x) \) existe
 - \( \underset{x \to x_{0}}{lim} f(x) = f(x_{0}) \)
 
-** Methode
+** Méthode
 
-*** Determiner une limite qui existe
+*** Déterminer une limite qui existe
 
-Afin d'annuler les Forme Indeterminee:
-- \( \sim \) quand on a des sinus sous reserve que ca tende vers 0
+Afin d'annuler les Forme Indéterminée:
+- \( \sim \) quand on a des sinus sous réserve que ça tende vers 0
 - Utiliser le conjugue, souvent avec les \( \sqrt{\cdot} \)
-- Annuler le denominateur autrement
+- Annuler le dénominateur autrement
 
 /Remarques/:
 - \( x^{T}x = \lVert x \rVert^{2} \) et une norme est toujours positive
-- \( A^{T} = A \) si \( A \) est symmetrique
-- La transposee d'un scalaire c'est lui meme, donc \( <x,y> = <x,y>^{T} \) 
+- \( A^{T} = A \) si \( A \) est symétrique
+- La transposée d'un scalaire c'est lui même, donc \( <x,y> = <x,y>^{T} \) 
 
   
-* Derivee partielle
+* Dérivée partielle
 
 ** Notation
 
@@ -86,11 +86,11 @@ Afin d'annuler les Forme Indeterminee:
 
 ** Utilisation
 
-On peut utiliser ces derivee partielle afin d'etudier une surface dans une direction donnee.
+On peut utiliser ces dérivée partielle afin d'étudier une surface dans une direction donnée.
 
 *** Matrice Hessienne
 
-La matrice Hessienne des derivees secondes est la suivante:
+La matrice Hessienne des dérivées secondes est la suivante:
 
 \[H = \begin{pmatrix}
 f_{xx} & f_{xy}\\
@@ -103,55 +103,55 @@ f_{yx} & f_{yy}
 
 ** Plans
 
-On peut approximer une surface, d'equation \( z = f(x,y) \) localement par un *plan* d'equation:
+On peut approximer une surface, d'équation \( z = f(x,y) \) localement par un *plan* d'équation:
 \[ z - z_{0} = \left( \frac{\partial{f}}{\partial{x}} \right)_{0} (x - x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
-Et on defini le *vecteur normal* a ce plan:
+Et on défini le *vecteur normal* a ce plan:
 \[ N= \begin{pmatrix} (f_{x})_{0}\\(f_{y})_{0}\\-1\end{pmatrix} \\ \qquad\text{Dirige vers l'exterieur pour une surface fermee}\qquad  \]
 
 /Note/: On peut poser: \( f = F + z \)
 
-** Approximation lineaire
+** Approximation linéaire
 
 En prenant \( df = f(x,y) - f(x_{0}, y_{0}) \) de \( f \) au point \( (x_{0},y_{0}) \), on a:
 
 \[ f(x,y) \sim f(x_{0},y_{0}) + \left( \frac{\partial{f}}{\partial{x}} \right)_{0}(x-x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
-** Methode
+** Méthode
 
-*Attention: toujours verifier qu'on nous donne pas directement un plan*
+*Attention: toujours vérifier qu'on nous donne pas directement un plan*
 
-*** Determiner le plan tangent \( z = f(x,y) \)
+*** Déterminer le plan tangent \( z = f(x,y) \)
 
 Soit un point \( P=(a, b, c) \), on utilise la formule:
 \[ \frac{\partial{f}}{\partial{x}}(a,b) \cdot (x - a) + \frac{\partial{f}}{\partial{y}}(a,b) \cdot (y-b) + f(a,b) - z = 0 \]
-Ainsi, on calcule les derivees partielles et remplace les expressions et on trouve une equation de plan de la forme:
+Ainsi, on calcule les dérivées partielles et remplace les expressions et on trouve une équation de plan de la forme:
 \[ ax + by + cz + cst = 0 \]
 
-*** Determiner le plan tangent \( F(x,y,z) = 0 \)
+*** Déterminer le plan tangent \( F(x,y,z) = 0 \)
 
 
 Soit un point \( P=(a, b, c) \), on utilise la formule:
 \[ \frac{\partial{f}}{\partial{x}}(a,b,c) \cdot (x - a) + \frac{\partial{f}}{\partial{y}}(a,b,c) \cdot (y-b) + \frac{\partial{f}}{\partial{z}}(a,b,c) \cdot (z-c) = 0 \]
-Ainsi, on calcule les derivees partielles et remplace les expressions et on trouve une equation de plan de la forme:
+Ainsi, on calcule les dérivées partielles et remplace les expressions et on trouve une équation de plan de la forme:
 \[ ax + by + cz + cst = 0 \]
 
 
-*** Determiner le vecteur normal
+*** Déterminer le vecteur normal
 
-Depuis notre equation de plan tangent, notre vecteur normal est le suivant:
+Depuis notre équation de plan tangent, notre vecteur normal est le suivant:
 
 \[ N = \begin{pmatrix} a \\ b \\ c \end{pmatrix} \]
 
-Avec \( c = -1 \), des transformations sont peut etre necessaires.
+Avec \( c = -1 \), des transformations sont peut être nécessaires.
 
 * Dérivées directionnelles et gradients
 
-*Rappel*: /En deux dimensions, ont peut construire une derivee dans une direction precise telle que \( Ox \) et \( Oy \) (cf. [[*Utilisation][Utilisation]])/
+*Rappel*: /En deux dimensions, ont peut construire une dérivée dans une direction précise telle que \( Ox \) et \( Oy \) (cf. [[*Utilisation][Utilisation]])/
 
-** Derivee directionnelle
+** Dérivée directionnelle
 
-Ainsi, une *derivee directionnelle* est donnee par:
+Ainsi, une *dérivée directionnelle* est donnée par:
 \[ D_{u}f = \nabla f \cdot \vec{u} \]
-Le vecteur \( u \)  doit etre *unitaire* (cad \( \lVert \vec{u} \rVert = \sqrt{x^{2} + y^{2}} = 1 \))
+Le vecteur \( u \)  doit être *unitaire* (cad \( \lVert \vec{u} \rVert = \sqrt{x^{2} + y^{2}} = 1 \))
 
 ** Taux d'accroissement
 
@@ -164,38 +164,38 @@ Il est donne par:
 
 Le gradient indique la plus forte pente.
 
-** Methode
+** Méthode
 
-*** Determiner \( D_{u}f(x,y) \) selon la direction d'une droite au lieu d'un vecteur unitaire
+*** Déterminer \( D_{u}f(x,y) \) selon la direction d'une droite au lieu d'un vecteur unitaire
 
-- Grace a l'equation de droite donnee, on sait qu'une droite passe par \( (0,0) \), trouvons donc un autre point \( (x,f(x)) \) qui nous donne notre vecteur directeur \( \vec{v} \).
-- Verifier que le vecteur est unitaire, si il ne l'est pas comme la plupart du temps, appliquer \( \vec{u} = \frac{\vec{v}}{\lVert \vec{v} \rVert}  \) 
+- Grâce a l'équation de droite donnée, on sait qu'une droite passe par \( (0,0) \), trouvons donc un autre point \( (x,f(x)) \) qui nous donne notre vecteur directeur \( \vec{v} \).
+- Vérifier que le vecteur est unitaire, si il ne l'est pas comme la plupart du temps, appliquer \( \vec{u} = \frac{\vec{v}}{\lVert \vec{v} \rVert}  \) 
 - Appliquer la formule \[ D_{u}f = \nabla f \cdot \vec{u} \]
 
-*** Determiner la derivee directionnelle dans la direction de la pente positive maximale
+*** Déterminer la dérivée directionnelle dans la direction de la pente positive maximale
 
-La pente positive maximale est donnee par le gradient, cependant le gradient n'est pas unitaire, on l'unitarise et on trouve au final que la derivee directionnelle est \( D_{u}f = \lVert \nabla f \rVert \) 
+La pente positive maximale est donnée par le gradient, cependant le gradient n'est pas unitaire, on l'unitarise et on trouve au final que la dérivée directionnelle est \( D_{u}f = \lVert \nabla f \rVert \) 
 
 * La dérivée composée ou « chain rule »
 
-TODO: Ecrire la formule
+TODO: Écrire la formule
 
-Sinon juste remplacer la composee dans la fonction de base.
+Sinon juste remplacer la composée dans la fonction de base.
 
 * Maxima, minima et points-cols
 
-La nature d'un point *stationnaire* (extrema, point de col) est ensuite determine par ses derievees partielles secondes. Cela revient a etudier la position de la surface associee a \( f \) par rapport a son plan tangent au point stationnaire.
+La nature d'un point *stationnaire* (extrema, point de col) est ensuite détermine par ses dérivées partielles secondes. Cela revient à étudier la position de la surface associée a \( f \) par rapport a son plan tangent au point stationnaire.
 
-Il y *possiblement* mais pas necessairement un point stationnaire quand:
+Il y *possiblement* mais pas nécessairement un point stationnaire quand:
 \[ \nabla f = \vec{0} \qquad\text{soit}\qquad f_{x} = f_{y} = 0\] 
 
-/Ou alors on utilise la matrice Hessienne, voir methode./
+/Ou alors on utilise la matrice Hessienne, voir méthode./
 
-** Methode
+** Méthode
 
-*** Determiner la nature d'un point critique
+*** Déterminer la nature d'un point critique
 
-Tout d'abord, calculer la matrice Hessienne pour le point desire.
+Tout d'abord, calculer la matrice Hessienne pour le point désiré.
 
 Ensuite suivre la forme suivante, soit \( H \) la matrice Hessienne:
 
