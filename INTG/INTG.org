@@ -1,0 +1,24 @@
+#+TITLE: Intégrales généralisées
+#+AUTHOR: raph
+#+STARTUP: showeverything inlineimages latexpreview
+#+SETUPFILE: ~/Documents/Cours/latex-setup-file.setup
+
+* Sommaire :noexport:toc:
+- [[#chapitre-2][Chapitre 2]]
+  - [[#méthodes][Méthodes]]
+
+* Chapitre 2
+
+** Méthodes
+
+*** Calculer limite de suites d'intégrales
+
+Soit \( I_{n} \) notre intégrale.
+
+1. Vérifier que la fonction est continue donc CM
+   /Exemple/: Quotient de fonction dont le dénominateur ne s'annule pas, alors continue sur un *intervalle* donc CM sur le même *intervalle*
+2. Étudier la convergence simple de \( f_{n} \) 
+3. Chercher une fonction \( \Phi \) intégrable tel que \( \forall n \in \mathbb{N} , \displaystyle\left\lvert F_{n}(x) \right\rvert   \leq\Phi(x)\) et que \( \int_{0}^{+\infty}\Phi(x)dx \) converge
+4. Par théorème de convergence dominée, on a \( I_{n} \) qui *converge* donc:
+   \[ \underset{n \to +\infty}{lim} \int_{0}^{+\infty}f_{n}(x)dx = \int_{0}^{+\infty}\underset{n \to +\infty}{lim} f_{n}(x) dx = \int_{0}^{+\infty}f(x)dx \] 
+\[  \]    \[  \] 
