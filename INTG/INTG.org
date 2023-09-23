@@ -4,10 +4,12 @@
 #+SETUPFILE: ~/Documents/Cours/latex-setup-file.setup
 
 * Sommaire :noexport:toc:
-- [[#chapitre-2][Chapitre 2]]
+- [[#suite-dintégrales][Suite d'intégrales]]
   - [[#méthodes][Méthodes]]
+- [[#intégrales-a-paramètres][Intégrales a paramètres]]
+  - [[#méthode][Méthode]]
 
-* Chapitre 2
+* Suite d'intégrales
 
 ** Méthodes
 
@@ -22,3 +24,31 @@ Soit \( I_{n} \) notre intégrale.
 4. Par théorème de convergence dominée, on a \( I_{n} \) qui *converge* donc:
    \[ \underset{n \to +\infty}{lim} \int_{0}^{+\infty}f_{n}(x)dx = \int_{0}^{+\infty}\underset{n \to +\infty}{lim} f_{n}(x) dx = \int_{0}^{+\infty}f(x)dx \] 
 \[  \]    \[  \] 
+* Intégrales a paramètres
+
+** Méthode
+
+*** Trouver domaine de définition de \( x \)
+
+1. Prendre la fonction \( f(x,t) \) pour tout \( t \) et regarder pour quelles valeurs de \( x \) la fonction a des FI
+2. En déduire le domaine de définition de \( x \)
+
+*** Montrer la continuité
+
+1. Vérifier: \( \forall t \in I, x \mapsto f(x,t) \quad\text{est continue sur A}\quad  \)
+2. Vérifier: \( \forall x \in A, t \mapsto f(x,t) \quad\text{est continue par morceaux sur I}\quad  \)
+
+Si les 2 sont continue, on peut même écrire \( \forall x \in A, \forall t \in I, (x,t) \mapsto f(x,t) \text{ est continue sur } A \times I\) 
+
+3. Trouver un \( g(t) \) tel que \( \displaystyle\left\lvert f(x,t) \right\rvert \leq g(t) \) et que g(t) continue et converge (donc intégrable)
+   *Remarque*: si on trouve pas de fonction \( g(t) \) facilement, prendre un subset du domaine de définition de \( x \), soit \( [a,b] \) et remplacer \( x \) par \( a \)  si la fonction est décroissante ou \( b \) si croissante
+
+Si ces conditions sont réunies, alors la fonction \( F: x \mapsto \int_{I}^{}f(x,t)dt \) est continue sur \( A \)
+
+*** Montrer la dérivabilité (montrer classe \( C^{1}\))
+
+Pareil que la continuité mais avec \( \frac{\partial{f}}{\partial{x}} \) 
+
+*** Déterminer une limite
+
+Si \( G_{n}(x) \) converge alors \( \underset{x \to 0}{lim} G_{n}(x) = G(0) \) 

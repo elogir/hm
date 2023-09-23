@@ -25,6 +25,9 @@
 - [[#la-dérivée-composée-ou--chain-rule-][La dérivée composée ou « chain rule »]]
 - [[#maxima-minima-et-points-cols][Maxima, minima et points-cols]]
   - [[#méthode-4][Méthode]]
+- [[#intégrales-doubles][Intégrales doubles]]
+  - [[#bornes-constantes][Bornes constantes]]
+  - [[#bornes-qui-dépendent-de-x-et-y][Bornes qui dépendent de x et y]]
 
 * Surface et lignes de niveau
 
@@ -205,3 +208,16 @@ Ensuite suivre la forme suivante, soit \( H \) la matrice Hessienne:
 \det(H) < 0 \implies \text{point de col} \\
 \det(H) > 0 \implies tr(H) > 0 \rightarrow \text{min} \qquad\text{ou}\qquad tr(H) < 0 \rightarrow \text{max}  
 \end{cases}\]
+
+* Intégrales doubles
+
+** Bornes constantes
+/Théorème de Fubini/: Si les bornes des intégrales sont des constantes, alors on peut inter-changer les intégrales.
+
+** Bornes qui dépendent de x et y
+
+Dans ce cas, on défini les domaines de définition puis on calcule.
+
+/Remarque/:
+- Si il y a rien dans les intégrales, on prend juste *borne haut* moins *borne bas*
+- Si on a une borne qui est \( \infty \) on fait comme une INTG et on regarde la limite
