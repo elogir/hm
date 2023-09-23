@@ -42,7 +42,7 @@ Une ligne de niveau est donnée par: \( cst = f(x,y) \)
 
 1. Poser \( f(x, y) = cst \) avec \( cst \) généralement donnée
 2. Isoler une des deux variables de \( f \) en fonction du reste (généralement \( y = \text{le reste} \))
-3. Déterminer pour plusieurs points de \( x \) la valeur grâce a l'équation précédente (*Attention a vérifier que le point existe, exemple: \( \sqrt{x} \)*)
+3. Déterminer pour plusieurs points de \( x \) la valeur grâce à l'équation précédente (*Attention à vérifier que le point existe, exemple: \( \sqrt{x} \)*)
 4. Tracer la courbe grâce aux points
 5. Si on nous demande de déterminer les valeurs de \( x \) pour lesquelles \( f(x) = \text{quelque chose}  \), regarder les intersections entre les courbes (cf. Ex 4 DT1)
 
@@ -52,7 +52,7 @@ Une ligne de niveau est donnée par: \( cst = f(x,y) \)
 
 Le voisinage/limite d'un point \( a \) est défini par l'ensemble suivant qui utilise un disque:
 \[ \{x\in \mathbb{R} ^{2}, \lVert x-a \rVert < \delta\} \]
-Ce qui implique qu'avec deux variables, ont peut approcher un point depuis *plusieurs directions ou chemins*
+Ce qui implique qu'avec deux variables, on peut approcher un point depuis *plusieurs directions ou chemins*
 
 Problème, le disque peut être en dehors de l'espace de définition, il y a alors 2 points différents:
 - Un point entièrement dans le disque: *point intérieur*
@@ -78,7 +78,7 @@ Afin de neutraliser les Formes Indéterminées:
 /Remarques/:
 - \( x^{T}x = \lVert x \rVert^{2} \) et une norme est toujours positive
 - \( A^{T} = A \) si \( A \) est symétrique
-- La transposée d'un scalaire c'est lui même, donc \( <x,y> = <x,y>^{T} \) 
+- La transposée d'un scalaire c'est lui-même, donc \( <x,y> = <x,y>^{T} \) 
 
   
 * Dérivée partielle
@@ -89,7 +89,7 @@ Afin de neutraliser les Formes Indéterminées:
 
 ** Utilisation
 
-On peut utiliser ces dérivée partielle afin d'étudier une surface dans une direction donnée.
+On peut utiliser ces dérivées partielles afin d'étudier une surface dans une direction donnée.
 
 *** Matrice Hessienne
 
@@ -108,7 +108,7 @@ f_{yx} & f_{yy}
 
 On peut approximer une surface, d'équation \( z = f(x,y) \) localement par un *plan* d'équation:
 \[ z - z_{0} = \left( \frac{\partial{f}}{\partial{x}} \right)_{0} (x - x_{0}) + \left( \frac{\partial{f}}{\partial{y}} \right)_{0}(y-y_{0}) \]
-Et on défini le *vecteur normal* a ce plan:
+Et on définit le *vecteur normal* a ce plan:
 \[ N= \begin{pmatrix} (f_{x})_{0}\\(f_{y})_{0}\\-1\end{pmatrix} \\ \qquad\text{Dirige vers l'exterieur pour une surface fermee}\qquad  \]
 
 /Note/: On peut poser: \( f = F + z \)
@@ -144,11 +144,11 @@ Depuis notre équation de plan tangent, notre vecteur normal est le suivant:
 
 \[ N = \begin{pmatrix} a \\ b \\ c \end{pmatrix} \]
 
-Avec \( c = -1 \), des transformations sont peut être nécessaires.
+Avec \( c = -1 \), des transformations sont peut-être nécessaires.
 
 * Dérivées directionnelles et gradients
 
-*Rappel*: /En deux dimensions, ont peut construire une dérivée dans une direction précise telle que \( Ox \) et \( Oy \) (cf. [[*Utilisation][Utilisation]])/
+*Rappel*: /En deux dimensions, on peut construire une dérivée dans une direction précise telle que \( Ox \) et \( Oy \) (cf. [[*Utilisation][Utilisation]])/
 
 ** Dérivée directionnelle
 
@@ -172,7 +172,7 @@ Le gradient indique la plus forte pente.
 *** Déterminer \( D_{u}f(x,y) \) selon la direction d'une droite au lieu d'un vecteur unitaire
 
 - Grâce a l'équation de droite donnée, on sait qu'une droite passe par \( (0,0) \), trouvons donc un autre point \( (x,f(x)) \) qui nous donne notre vecteur directeur \( \vec{v} \).
-- Vérifier que le vecteur est unitaire, si il ne l'est pas comme la plupart du temps, appliquer \( \vec{u} = \frac{\vec{v}}{\lVert \vec{v} \rVert}  \) 
+- Vérifier que le vecteur est unitaire, s'il ne l'est pas comme la plupart du temps, appliquer \( \vec{u} = \frac{\vec{v}}{\lVert \vec{v} \rVert}  \) 
 - Appliquer la formule \[ D_{u}f = \nabla f \cdot \vec{u} \]
 
 *** Déterminer la dérivée directionnelle dans la direction de la pente positive maximale
@@ -187,7 +187,7 @@ Sinon juste remplacer la composée dans la fonction de base.
 
 * Maxima, minima et points-cols
 
-La nature d'un point *stationnaire* (extrema, point de col) est ensuite détermine par ses dérivées partielles secondes. Cela revient à étudier la position de la surface associée a \( f \) par rapport a son plan tangent au point stationnaire.
+La nature d'un point *stationnaire* (extrema, point de col) est ensuite détermine par ses dérivées partielles secondes. Cela revient à étudier la position de la surface associée a \( f \) par rapport à son plan tangent au point stationnaire.
 
 Il y *possiblement* mais pas nécessairement un point stationnaire quand:
 \[ \nabla f = \vec{0} \qquad\text{soit}\qquad f_{x} = f_{y} = 0\] 
@@ -216,8 +216,8 @@ Ensuite suivre la forme suivante, soit \( H \) la matrice Hessienne:
 
 ** Bornes qui dépendent de x et y
 
-Dans ce cas, on défini les domaines de définition puis on calcule.
+Dans ce cas, on définit les domaines de définition puis on calcule.
 
 /Remarque/:
-- Si il y a rien dans les intégrales, on prend juste *borne haut* moins *borne bas*
+- S'il y a rien dans les intégrales, on prend juste *borne haut* moins *borne bas*
 - Si on a une borne qui est \( \infty \) on fait comme une INTG et on regarde la limite
